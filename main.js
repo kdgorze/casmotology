@@ -65,3 +65,5 @@ function flipCard(btn, direction) {
 
   label.textContent = labels[next];
 }
+
+reveals.forEach(el => el.classList.add('visible'));
