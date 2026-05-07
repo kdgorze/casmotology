@@ -6,12 +6,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --cream: #EDE8E0;
+  --cream: #D9D2C7;
   --espresso: #1A0F06;
   --blush: #C47A6B;
   --blush-light: #DDB8AE;
   --warm-grey: #6B5F57;
-  --card-bg: #E6E0D8;
+  --card-bg: #CEC7BB;
   --font-display: 'Cormorant Garamond', serif;
   --font-body: 'Jost', sans-serif;
 }
@@ -19,7 +19,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--cream);
+  background: #D9D2C7;
   color: var(--espresso);
   font-family: var(--font-body);
   font-weight: 300;
