@@ -429,7 +429,7 @@ hr.divider {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
-  align-items: start;
+  align-items: center;
 }
 .contact-info .contact-detail {
   display: flex;
@@ -517,6 +517,23 @@ hr.divider {
 .form-success p { font-family: var(--font-display); font-size: 1.6rem; font-style: italic; font-weight: 300; color: var(--espresso); margin-bottom: 0.5rem; }
 .form-success small { color: var(--warm-grey); font-size: 0.8rem; }
 
+/* -- photo for contact -- */
+.contact-photo-wrap {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.contact-photo-wrap img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+  border: 3px solid var(--blush-light);
+  outline: 1px solid var(--blush);
+  outline-offset: 10px;
+}
+
 /* ── FOOTER ── */
 footer {
   background: var(--espresso);
@@ -569,7 +586,7 @@ footer .footer-logo {
   .form-row { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   section { padding: 4rem 5%; }
   .work-grid { grid-template-columns: 1fr; }
   .hero-tag { display: none; }
