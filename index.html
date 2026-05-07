@@ -17,8 +17,8 @@
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
     <li><a href="#contact">Contact Me</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -40,22 +40,32 @@
 ══════════════════════════════════════════════ -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Licensed Cosmetologist · Available Now</p>
+    <p class="hero-eyebrow">Aspiring Cosmetologist · Available Now</p>
     <h1 class="hero-title">
       Beauty is
       <em>an art form.</em>
     </h1>
-    <p class="hero-sub">From precision cuts to stunning color transformations — every client leaves feeling like the best version of themselves.</p>
-    <a href="#contact" class="btn-primary">Book a Session</a>
+    <p class="hero-sub">Making dreams into reality with a magic touch. Varying from color transformations to lashes that bloom. Every client leaves with the feeling of greatness.</p>
+    <a href="#contact" class="btn-primary">Contact Me!</a>
   </div>
   <div class="hero-right">
     <div class="hero-image-grid">
-      <!-- Replace these divs with: <img src="images/hero-1.jpg" alt="..." /> -->
-      <img src="images/standby_1.jpg" alt="Hair styling work" />
-      <img src="images/standby_2.jpg" alt="Hair styling work" />
-      <img src="images/standby_3.jpg" alt="Hair styling work" />
-      <img src="images/standby_4.jpg" alt="Hair styling work" />
+
+      <div class="hero-img-placeholder">
+        <img src="images/standby_1.jpg" alt="Hair styling work" />
     </div>
+      <div class="hero-img-placeholder">
+        <img src="images/standby_2.jpg" alt="Hair styling work" />
+    </div>
+    <div class="hero-img-placeholder">
+        <img src="images/standby_3.jpg" alt="Hair styling work" />
+    </div>
+    <div class="hero-img-placeholder">
+        <img src="images/standby_4.jpg" alt="Hair styling work" />
+    </div>
+
+    </div>
+
     <div class="hero-tag">
       <p>Transformations</p>
       <strong>✦ 100+</strong>
@@ -67,135 +77,98 @@
      PORTFOLIO / WORK
 ══════════════════════════════════════════════ -->
 <section id="work">
-  <p class="section-label reveal">Portfolio</p>
+  <p class="section-label reveal">My Portfolio</p>
   <h2 class="section-title reveal">The <em>work</em><br>speaks for itself.</h2>
   <hr class="divider" />
   <div class="work-grid">
 
     <!-- PORTFOLIO CARD 1 -->
     <div class="work-card reveal">
-  <div class="work-card-img">
-    <div class="ba-slider">
-      <img class="ba-after"  src="images/michael_2.jpg"  alt="After" />
-      <div class="ba-before-wrap">
-        <img class="ba-before" src="images/michael_1.jpg" alt="Before" />
-      </div>
-      <div class="ba-handle">
-        <div class="ba-line"></div>
-        <div class="ba-circle">&#8596;</div>
-        <div class="ba-line"></div>
-      </div>
-      <span class="ba-label-before">Before</span>
-      <span class="ba-label-after">After</span>
+        <div class="work-card-img">
+            <div class="ba-flip">
+            <img class="ba-img active" src="images/michael_1.jpg"  alt="Before" />
+            <img class="ba-img"        src="images/michael_2.jpg" alt="After" />
+            <button class="ba-btn ba-btn--prev" onclick="flipCard(this, -1)">&#8592;</button>
+            <button class="ba-btn ba-btn--next" onclick="flipCard(this,  1)">&#8594;</button>
+            <span class="ba-current-label">Before</span>
+            </div>
+        </div>
+        <div class="work-card-overlay"><span class="work-card-label">Hair Coloring</span></div>
     </div>
-  </div>
-  <div class="work-card-overlay"><span class="work-card-label">Balayage Color</span></div>
-</div>
 
     <!-- PORTFOLIO CARD 2 -->
     <div class="work-card reveal">
-  <div class="work-card-img">
-    <div class="ba-slider">
-      <img class="ba-after"  src="images/ahair_2.jpg"  alt="After" />
-      <div class="ba-before-wrap">
-        <img class="ba-before" src="images/ahair_4.jpg" alt="Before" />
-      </div>
-      <div class="ba-handle">
-        <div class="ba-line"></div>
-        <div class="ba-circle">&#8596;</div>
-        <div class="ba-line"></div>
-      </div>
-      <span class="ba-label-before">Before</span>
-      <span class="ba-label-after">After</span>
+        <div class="work-card-img">
+            <div class="ba-flip">
+            <img class="ba-img active" src="images/ahair_4.jpg"  alt="Before" />
+            <img class="ba-img"        src="images/ahair_2.jpg" alt="After" />
+            <button class="ba-btn ba-btn--prev" onclick="flipCard(this, -1)">&#8592;</button>
+            <button class="ba-btn ba-btn--next" onclick="flipCard(this,  1)">&#8594;</button>
+            <span class="ba-current-label">Before</span>
+            </div>
+        </div>
+        <div class="work-card-overlay"><span class="work-card-label">A Blow Out</span></div>
     </div>
-  </div>
-  <div class="work-card-overlay"><span class="work-card-label">Balayage Color</span></div>
-</div>
 
 
     <!-- PORTFOLIO CARD 3 -->
     <div class="work-card reveal">
-  <div class="work-card-img">
-    <div class="ba-slider">
-      <img class="ba-after"  src="images/rhair_4.jpg"  alt="After" />
-      <div class="ba-before-wrap">
-        <img class="ba-before" src="images/rhair_3.jpg" alt="Before" />
-      </div>
-      <div class="ba-handle">
-        <div class="ba-line"></div>
-        <div class="ba-circle">&#8596;</div>
-        <div class="ba-line"></div>
-      </div>
-      <span class="ba-label-before">Before</span>
-      <span class="ba-label-after">After</span>
+        <div class="work-card-img">
+            <div class="ba-flip">
+            <img class="ba-img active" src="images/eyes_3.jpg"  alt="Before" />
+            <img class="ba-img"        src="images/eyes_4.jpg" alt="After" />
+            <button class="ba-btn ba-btn--prev" onclick="flipCard(this, -1)">&#8592;</button>
+            <button class="ba-btn ba-btn--next" onclick="flipCard(this,  1)">&#8594;</button>
+            <span class="ba-current-label">Before</span>
+            </div>
+        </div>
+        <div class="work-card-overlay"><span class="work-card-label">Lashes for Prom</span></div>
     </div>
-  </div>
-  <div class="work-card-overlay"><span class="work-card-label">Balayage Color</span></div>
-</div>
 
 
     <!-- PORTFOLIO CARD 4 -->
     <div class="work-card reveal">
-  <div class="work-card-img">
-    <div class="ba-slider">
-      <img class="ba-after"  src="images/rhair_2.jpg"  alt="After" />
-      <div class="ba-before-wrap">
-        <img class="ba-before" src="images/rhair_1.jpg" alt="Before" />
-      </div>
-      <div class="ba-handle">
-        <div class="ba-line"></div>
-        <div class="ba-circle">&#8596;</div>
-        <div class="ba-line"></div>
-      </div>
-      <span class="ba-label-before">Before</span>
-      <span class="ba-label-after">After</span>
+        <div class="work-card-img">
+            <div class="ba-flip">
+            <img class="ba-img active" src="images/rhair_3.jpg"  alt="Before" />
+            <img class="ba-img"        src="images/rhair_4.jpg" alt="After" />
+            <button class="ba-btn ba-btn--prev" onclick="flipCard(this, -1)">&#8592;</button>
+            <button class="ba-btn ba-btn--next" onclick="flipCard(this,  1)">&#8594;</button>
+            <span class="ba-current-label">Before</span>
+            </div>
+        </div>
+        <div class="work-card-overlay"><span class="work-card-label">Coloring and Life</span></div>
     </div>
-  </div>
-  <div class="work-card-overlay"><span class="work-card-label">Balayage Color</span></div>
-</div>
 
 
     <!-- PORTFOLIO CARD 5 -->
     <div class="work-card reveal">
-  <div class="work-card-img">
-    <div class="ba-slider">
-      <img class="ba-after"  src="images/eyes_2.jpg"  alt="After" />
-      <div class="ba-before-wrap">
-        <img class="ba-before" src="images/eyes_1.jpg" alt="Before" />
-      </div>
-      <div class="ba-handle">
-        <div class="ba-line"></div>
-        <div class="ba-circle">&#8596;</div>
-        <div class="ba-line"></div>
-      </div>
-      <span class="ba-label-before">Before</span>
-      <span class="ba-label-after">After</span>
+        <div class="work-card-img">
+            <div class="ba-flip">
+            <img class="ba-img active" src="images/rhair_1.jpg"  alt="Before" />
+            <img class="ba-img"        src="images/rhair_2.jpg" alt="After" />
+            <button class="ba-btn ba-btn--prev" onclick="flipCard(this, -1)">&#8592;</button>
+            <button class="ba-btn ba-btn--next" onclick="flipCard(this,  1)">&#8594;</button>
+            <span class="ba-current-label">Before</span>
+            </div>
+        </div>
+        <div class="work-card-overlay"><span class="work-card-label">Hair Foiling</span></div>
     </div>
-  </div>
-  <div class="work-card-overlay"><span class="work-card-label">Balayage Color</span></div>
-</div>
 
 
     <!-- PORTFOLIO CARD 6 -->
     <div class="work-card reveal">
-  <div class="work-card-img">
-    <div class="ba-slider">
-      <img class="ba-after"  src="images/eyes_4.jpg"  alt="After" />
-      <div class="ba-before-wrap">
-        <img class="ba-before" src="images/eyes_3.jpg" alt="Before" />
-      </div>
-      <div class="ba-handle">
-        <div class="ba-line"></div>
-        <div class="ba-circle">&#8596;</div>
-        <div class="ba-line"></div>
-      </div>
-      <span class="ba-label-before">Before</span>
-      <span class="ba-label-after">After</span>
+        <div class="work-card-img">
+            <div class="ba-flip">
+            <img class="ba-img active" src="images/eyes_1.jpg"  alt="Before" />
+            <img class="ba-img"        src="images/eyes_2.jpg" alt="After" />
+            <button class="ba-btn ba-btn--prev" onclick="flipCard(this, -1)">&#8592;</button>
+            <button class="ba-btn ba-btn--next" onclick="flipCard(this,  1)">&#8594;</button>
+            <span class="ba-current-label">Before</span>
+            </div>
+        </div>
+        <div class="work-card-overlay"><span class="work-card-label">More Lashes</span></div>
     </div>
-  </div>
-  <div class="work-card-overlay"><span class="work-card-label">Balayage Color</span></div>
-</div>
-
 
   </div>
 </section>
@@ -211,24 +184,25 @@
     <div class="about-accent-box"></div>
     <div class="about-badge">
       <span>Est.</span>
-      <strong>2025</strong>
+      <strong>2024</strong>
     </div>
   </div>
 
   <div class="about-text reveal">
     <p class="section-label">About Me</p>
-    <h2 class="section-title">Passion behind <em>every strand.</em></h2>
-    <p>Hi! I'm <strong>Casmon</strong>, an aspiring cosmetologist with a deep love for the transformative power of hair. I am a current student in cosmetology school and I'm ready to bring my creativity, precision, and care to every single client.</p>
-    <p>Whether you're looking for a bold new color, a fresh cut, or a gorgeous updo for a special event — I'm here to make your vision a reality. Every appointment is a collaboration, and I never stop until you're in love with what you see in the mirror.</p>
-    <p>I believe great hair starts with great communication. I take the time to truly listen to what you want, and I'm always honest about what will work best for your hair type and lifestyle.</p>
+    <h2 class="section-title">Passion behind <em>every move.</em></h2>
+    <p>Hi! I'm <strong>Casmon</strong>, an aspiring cosmetologist with a deep love for the transformative of confidence. I am a current student in cosmetology school and I'm ready to bring my creativity, precision, and care to every new client.</p>
+    <p>Whether you're looking for a bold new color, a fresh cut, or a gorgeous updo for a special event, I'm here to make your vision a reality. My adaptablitiy and prefectionism makes sure each new client will get exactly what they are looking for.</p>
+    <p>I believe great looks starts with great communication. I will always take the time to listen to a client's wants, while giving my own honest feedback about what I think personally suits them best.</p>
     <div class="about-services">
-      <span class="service-tag">Color &amp; Balayage</span>
+      <span class="service-tag">Coloring</span>
       <span class="service-tag">Cuts &amp; Trims</span>
       <span class="service-tag">Highlights</span>
-      <span class="service-tag">Updos</span>
+      <span class="service-tag">Lashes</span>
       <span class="service-tag">Blowouts</span>
       <span class="service-tag">Extensions</span>
       <span class="service-tag">Treatments</span>
+      <span class="service-tag">&amp; More!</span>
     </div>
   </div>
 </section>
@@ -242,7 +216,7 @@
   <p class="section-label">Get in Touch</p>
   <h2 class="section-title">Let's make <em>something beautiful.</em></h2>
   <p style="font-size:0.9rem;line-height:1.8;color:var(--warm-grey);margin-bottom:2rem;">
-    Have a question or ready to book? Reach out any way you like — I'd love to hear from you!
+    Have a question or want to get in touch? Reach out anyway you like - I'm always down to chat!
   </p>
 
   <div class="contact-detail">
@@ -276,7 +250,7 @@
     </div>
 
     <div class="contact-photo-wrap reveal">
-        <img src="images/casmon_filter2.png" alt="[Casmon]" />
+        <img src="images/cg_2.jpg" alt="[Casmon]" />
     </div>
 
 </section>
@@ -285,26 +259,26 @@
      REVIEWS
 ══════════════════════════════════════════════ -->
 <section id="testimonials">
-  <p class="section-label">Kind Words from Friends</p>
-  <h2 class="section-title">What clients <em>are saying.</em></h2>
+  <p class="section-label">Kind Reviews</p>
+  <h2 class="section-title">What clients <em>are gossiping about.</em></h2>
   <div class="testimonial-track">
 
     <div class="testimonial-card reveal">
-      <div class="stars">★★★★</div>
+      <div class="stars">★★★★★</div>
       <blockquote>"I loved my haircut! I asked her for her father's number and she didn't give it to me, so that's why I gave only 4 stars."</blockquote>
-      <cite>— Lawyer, Son  of Angelo</cite>
+      <cite>— Patricia "Nana" B.</cite>
     </div>
 
     <div class="testimonial-card reveal">
       <div class="stars">★★★★★</div>
       <blockquote>"Best balayage I've ever had. The color is so natural and blended perfectly. I got so many compliments within the first week!"</blockquote>
-      <cite>— Jenna R.</cite>
+      <cite>— Alyssa G.</cite>
     </div>
 
     <div class="testimonial-card reveal">
       <div class="stars">★★★★★</div>
       <blockquote>"She's so talented and easy to talk to. I came in nervous about going shorter and she made me feel totally comfortable. Love my new cut!"</blockquote>
-      <cite>— Maria T.</cite>
+      <cite>— Michael Z.</cite>
     </div>
 
   </div>
@@ -314,7 +288,7 @@
      FOOTER
 ══════════════════════════════════════════════ -->
 <footer>
-  <span class="footer-logo">Casmotology</span>
+  <span class="footer-logo">Casmotology, a perfect choice.</span>
   <p>© 2025 Casmotology · All Rights Reserved</p>
   <p style="margin-top:0.4rem;">Made with love, from her brother. · <a href="#contact">Contact Me!</a></p>
 </footer>

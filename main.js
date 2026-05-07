@@ -50,27 +50,18 @@ function submitForm() {
   document.getElementById('formSuccess').style.display = 'block';
 }
 
-// ── Before / After Sliders ─────────────────────────────────
-document.querySelectorAll('.ba-slider').forEach(slider => {
-  const beforeWrap = slider.querySelector('.ba-before-wrap');
-  const handle     = slider.querySelector('.ba-handle');
-  let dragging = false;
+// ── Before / After Flip ────────────────────────────────────
+function flipCard(btn, direction) {
+  const flip   = btn.closest('.ba-flip');
+  const images = flip.querySelectorAll('.ba-img');
+  const label  = flip.querySelector('.ba-current-label');
+  const labels = ['Before', 'After'];
 
-  function setPosition(x) {
-    const rect = slider.getBoundingClientRect();
-    let pct = (x - rect.left) / rect.width;
-    pct = Math.min(Math.max(pct, 0.02), 0.98);
-    beforeWrap.style.width = (pct * 100) + '%';
-    handle.style.left      = (pct * 100) + '%';
-  }
+  let current = [...images].findIndex(img => img.classList.contains('active'));
+  images[current].classList.remove('active');
 
-  // Mouse
-  slider.addEventListener('mousedown',  e => { dragging = true; setPosition(e.clientX); });
-  window.addEventListener('mousemove',  e => { if (dragging) setPosition(e.clientX); });
-  window.addEventListener('mouseup',    ()  => { dragging = false; });
+  let next = (current + direction + images.length) % images.length;
+  images[next].classList.add('active');
 
-  // Touch
-  slider.addEventListener('touchstart', e => { dragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
-  window.addEventListener('touchmove',  e => { if (dragging) setPosition(e.touches[0].clientX); },  { passive: true });
-  window.addEventListener('touchend',   ()  => { dragging = false; });
-});
+  label.textContent = labels[next];
+}
