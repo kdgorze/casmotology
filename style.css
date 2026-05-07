@@ -148,7 +148,7 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(44,26,14,0.08); }
 .hero-sub {
   font-size: 0.9rem;
   line-height: 1.8;
-  color: var(--blush-light);
+  color: var(--blush);
   max-width: 340px;
   margin-bottom: 2.8rem;
 }
@@ -174,7 +174,7 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(44,26,14,0.08); }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--blush-light) 0%, #c9a99e 100%);
+  background: linear-gradient(135deg, var(--blush) 0%, #c9a99e 100%);
   z-index: 0;
 }
 .hero-image-grid {
@@ -187,7 +187,7 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(44,26,14,0.08); }
   z-index: 1;
 }
 .hero-img-placeholder {
-  background: var(--blush-light);
+  background: var(--blush);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -262,7 +262,7 @@ hr.divider {
 .work-card-img {
   width: 100%;
   aspect-ratio: 3/4;
-  background: var(--blush-light);
+  background: var(--blush);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,7 +349,7 @@ hr.divider {
   left: -1.8rem;
   width: 65%;
   height: 55%;
-  border: 1.5px solid var(--blush-light);
+  border: 1.5px solid var(--blush);
   z-index: -1;
 }
 .about-badge {
@@ -372,7 +372,7 @@ hr.divider {
 .about-text p {
   font-size: 0.95rem;
   line-height: 1.9;
-  color: var(--blush-light);
+  color: var(--blush);
   margin-bottom: 1.2rem;
 }
 .about-text p strong { color: var(--espresso); font-weight: 400; }
@@ -387,13 +387,13 @@ hr.divider {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 0.45rem 1rem;
-  border: 1px solid var(--blush-light);
+  border: 1px solid var(--blush);
   color: var(--espresso);
 }
 
 /* ── TESTIMONIALS ── */
 #testimonials { background: var(--espresso); color: var(--cream); text-align: center; padding: 5rem 8%; }
-#testimonials .section-label { color: var(--blush-light); }
+#testimonials .section-label { color: var(--blush); }
 #testimonials .section-title { color: var(--cream); }
 .testimonial-track {
   display: grid;
@@ -440,7 +440,7 @@ hr.divider {
 }
 .contact-icon {
   width: 36px; height: 36px;
-  border: 1px solid var(--blush-light);
+  border: 1px solid var(--blush);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -513,7 +513,7 @@ hr.divider {
   text-align: center;
   padding: 3rem 2rem;
   background: var(--card-bg);
-  border: 1px solid var(--blush-light);
+  border: 1px solid var(--blush);
 }
 .form-success p { font-family: var(--font-display); font-size: 1.6rem; font-style: italic; font-weight: 300; color: var(--espresso); margin-bottom: 0.5rem; }
 .form-success small { color: var(--warm-grey); font-size: 0.8rem; }
@@ -534,7 +534,7 @@ hr.divider {
   object-fit: cover;
   display: block;
   border: 3px solid var(--blush);
-  outline: 1px solid var(--blush-light);
+  outline: 1px solid var(--blush);
   outline-offset: 10px;
 }
 
@@ -554,7 +554,7 @@ footer {
   font-size: 0.72rem;
   letter-spacing: 0.12em;
 }
-footer a { color: var(--blush-light); text-decoration: none; }
+footer a { color: var(--blush); text-decoration: none; }
 footer .footer-logo {
   font-family: var(--font-display);
   font-size: 1.8rem;
