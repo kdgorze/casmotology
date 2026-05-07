@@ -49,3 +49,28 @@ function submitForm() {
   document.getElementById('contactForm').style.display = 'none';
   document.getElementById('formSuccess').style.display = 'block';
 }
+
+// ── Before / After Sliders ─────────────────────────────────
+document.querySelectorAll('.ba-slider').forEach(slider => {
+  const beforeWrap = slider.querySelector('.ba-before-wrap');
+  const handle     = slider.querySelector('.ba-handle');
+  let dragging = false;
+
+  function setPosition(x) {
+    const rect = slider.getBoundingClientRect();
+    let pct = (x - rect.left) / rect.width;
+    pct = Math.min(Math.max(pct, 0.02), 0.98);
+    beforeWrap.style.width = (pct * 100) + '%';
+    handle.style.left      = (pct * 100) + '%';
+  }
+
+  // Mouse
+  slider.addEventListener('mousedown',  e => { dragging = true; setPosition(e.clientX); });
+  window.addEventListener('mousemove',  e => { if (dragging) setPosition(e.clientX); });
+  window.addEventListener('mouseup',    ()  => { dragging = false; });
+
+  // Touch
+  slider.addEventListener('touchstart', e => { dragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchmove',  e => { if (dragging) setPosition(e.touches[0].clientX); },  { passive: true });
+  window.addEventListener('touchend',   ()  => { dragging = false; });
+});

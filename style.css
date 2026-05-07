@@ -517,7 +517,7 @@ hr.divider {
 .form-success p { font-family: var(--font-display); font-size: 1.6rem; font-style: italic; font-weight: 300; color: var(--espresso); margin-bottom: 0.5rem; }
 .form-success small { color: var(--warm-grey); font-size: 0.8rem; }
 
-/* -- photo for contact -- */
+/* -- PHOTOS -- */
 .contact-photo-wrap {
   position: relative;
   max-width: 380px;
@@ -535,6 +535,13 @@ hr.divider {
   border: 3px solid var(--blush);
   outline: 1px solid var(--blush-light);
   outline-offset: 10px;
+}
+
+.hero-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ── FOOTER ── */
@@ -567,6 +574,79 @@ footer .footer-logo {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+/* ── BEFORE / AFTER SLIDER ── */
+.ba-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: col-resize;
+  user-select: none;
+}
+
+.ba-after,
+.ba-before {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.ba-before-wrap {
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.ba-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ba-line {
+  flex: 1;
+  width: 2px;
+  background: #fff;
+}
+
+.ba-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--espresso);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+
+.ba-label-before,
+.ba-label-after {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: rgba(44,26,14,0.55);
+  color: #fff;
+  padding: 0.25rem 0.6rem;
+}
+.ba-label-before { left: 0.8rem; }
+.ba-label-after  { right: 0.8rem; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   nav { padding: 1rem 5%; }
@@ -596,3 +676,4 @@ footer .footer-logo {
   .work-grid { grid-template-columns: 1fr; }
   .hero-tag { display: none; }
 }
+
