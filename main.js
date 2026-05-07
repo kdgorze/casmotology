@@ -27,16 +27,20 @@ function closeMenu() {
 
 // ── Scroll Reveal ──────────────────────────────────────────
 const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), 80);
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
 
-reveals.forEach(el => observer.observe(el));
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05 });
+  reveals.forEach(el => observer.observe(el));
+} else {
+  reveals.forEach(el => el.classList.add('visible'));
+}
 
 // ── Contact Form Submit ────────────────────────────────────
 function submitForm() {
@@ -65,5 +69,3 @@ function flipCard(btn, direction) {
 
   label.textContent = labels[next];
 }
-
-reveals.forEach(el => el.classList.add('visible'));
