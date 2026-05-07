@@ -1,9 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Casmontology</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casmotology</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <h1>Welcome to Casmontology!</h1>
+
+<!-- ══════════════════════════════════════════════
+     NAV
+══════════════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Casmo<span>tology</span></a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#contact">Book Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════════════════════
+     MOBILE MENU
+══════════════════════════════════════════════ -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work"         onclick="closeMenu()">Work</a>
+  <a href="#about"        onclick="closeMenu()">About</a>
+  <a href="#testimonials" onclick="closeMenu()">Reviews</a>
+  <a href="#contact"      onclick="closeMenu()">Book Now</a>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Licensed Cosmetologist · Available Now</p>
+    <h1 class="hero-title">
+      Beauty is
+      <em>an art form.</em>
+    </h1>
+    <p class="hero-sub">From precision cuts to stunning color transformations — every client leaves feeling like the best version of themselves.</p>
+    <a href="#contact" class="btn-primary">Book a Session</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-grid">
+      <!-- Replace these divs with: <img src="images/hero-1.jpg" alt="..." /> -->
+      <div class="hero-img-placeholder">Add photo</div>
+      <div class="hero-img-placeholder">Add photo</div>
+      <div class="hero-img-placeholder">Add photo</div>
+      <div class="hero-img-placeholder">Add photo</div>
+    </div>
+    <div class="hero-tag">
+      <p>Transformations</p>
+      <strong>✦ 100+</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     PORTFOLIO / WORK
+══════════════════════════════════════════════ -->
+<section id="work">
+  <p class="section-label reveal">Portfolio</p>
+  <h2 class="section-title reveal">The <em>work</em><br>speaks for itself.</h2>
+  <hr class="divider" />
+  <div class="work-grid">
+
+    <div class="work-card reveal">
+      <!-- Replace inner div with: <img src="images/work-1.jpg" alt="Balayage Color" /> -->
+      <div class="work-card-img">Add photo</div>
+      <div class="work-card-overlay"><span class="work-card-label">Balayage Color</span></div>
+    </div>
+
+    <div class="work-card reveal">
+      <div class="work-card-img">Add photo</div>
+      <div class="work-card-overlay"><span class="work-card-label">Precision Cut</span></div>
+    </div>
+
+    <div class="work-card reveal">
+      <div class="work-card-img">Add photo</div>
+      <div class="work-card-overlay"><span class="work-card-label">Updo &amp; Styling</span></div>
+    </div>
+
+    <div class="work-card reveal">
+      <div class="work-card-img">Add photo</div>
+      <div class="work-card-overlay"><span class="work-card-label">Full Color</span></div>
+    </div>
+
+    <div class="work-card reveal">
+      <div class="work-card-img">Add photo</div>
+      <div class="work-card-overlay"><span class="work-card-label">Highlights</span></div>
+    </div>
+
+    <div class="work-card reveal">
+      <div class="work-card-img">Add photo</div>
+      <div class="work-card-overlay"><span class="work-card-label">Blowout</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════ -->
+<section id="about">
+  <div class="about-img-wrap reveal">
+    <!-- Replace inner div with: <img src="images/about.jpg" alt="[Your Name]" /> -->
+    <div class="about-photo">Your photo here</div>
+    <div class="about-accent-box"></div>
+    <div class="about-badge">
+      <span>Est.</span>
+      <strong>2025</strong>
+    </div>
+  </div>
+
+  <div class="about-text reveal">
+    <p class="section-label">About Me</p>
+    <h2 class="section-title">Passion behind <em>every strand.</em></h2>
+    <p>Hi! I'm <strong>[Your Name]</strong>, a licensed cosmetologist with a deep love for the transformative power of hair. I recently graduated from cosmetology school and I'm ready to bring my creativity, precision, and care to every single client.</p>
+    <p>Whether you're looking for a bold new color, a fresh cut, or a gorgeous updo for a special event — I'm here to make your vision a reality. Every appointment is a collaboration, and I never stop until you're in love with what you see in the mirror.</p>
+    <p>I believe great hair starts with great communication. I take the time to truly listen to what you want, and I'm always honest about what will work best for your hair type and lifestyle.</p>
+    <div class="about-services">
+      <span class="service-tag">Color &amp; Balayage</span>
+      <span class="service-tag">Cuts &amp; Trims</span>
+      <span class="service-tag">Highlights</span>
+      <span class="service-tag">Updos</span>
+      <span class="service-tag">Blowouts</span>
+      <span class="service-tag">Extensions</span>
+      <span class="service-tag">Treatments</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     TESTIMONIALS / REVIEWS
+══════════════════════════════════════════════ -->
+<section id="testimonials">
+  <p class="section-label">Kind Words</p>
+  <h2 class="section-title">What clients <em>are saying.</em></h2>
+  <div class="testimonial-track">
+
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <blockquote>"She listened to exactly what I wanted and delivered beyond my expectations. My hair has never looked this good — I'm obsessed!"</blockquote>
+      <cite>— Sarah M.</cite>
+    </div>
+
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <blockquote>"Best balayage I've ever had. The color is so natural and blended perfectly. I got so many compliments within the first week!"</blockquote>
+      <cite>— Jenna R.</cite>
+    </div>
+
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <blockquote>"She's so talented and easy to talk to. I came in nervous about going shorter and she made me feel totally comfortable. Love my new cut!"</blockquote>
+      <cite>— Maria T.</cite>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════ -->
+<section id="contact">
+
+  <div class="contact-info reveal">
+    <p class="section-label">Get in Touch</p>
+    <h2 class="section-title">Let's make <em>something beautiful.</em></h2>
+    <p style="font-size:0.9rem;line-height:1.8;color:var(--warm-grey);margin-bottom:2rem;">
+      Ready to book an appointment or just have a question? Fill out the form and I'll get back to you as soon as possible — usually within 24 hours!
+    </p>
+
+    <div class="contact-detail">
+      <div class="contact-icon">✉</div>
+      <div class="contact-detail-text">
+        <p>Email</p>
+        <strong>hello@casmotology.com</strong>
+      </div>
+    </div>
+
+    <div class="contact-detail">
+      <div class="contact-icon">📍</div>
+      <div class="contact-detail-text">
+        <p>Location</p>
+        <strong>Your City, State</strong>
+      </div>
+    </div>
+
+    <div class="contact-detail">
+      <div class="contact-icon">📅</div>
+      <div class="contact-detail-text">
+        <p>Availability</p>
+        <strong>Tue – Sat, 9am – 6pm</strong>
+      </div>
+    </div>
+
+    <div class="social-row">
+      <a href="#" class="social-btn">Instagram</a>
+      <a href="#" class="social-btn">TikTok</a>
+    </div>
+  </div>
+
+  <div class="reveal">
+    <div class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" placeholder="Jane" />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="Doe" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="jane@example.com" />
+      </div>
+      <div class="form-group">
+        <label for="service">Service Interested In</label>
+        <select id="service">
+          <option value="">Select a service…</option>
+          <option>Color &amp; Balayage</option>
+          <option>Cut &amp; Trim</option>
+          <option>Highlights</option>
+          <option>Updo / Special Event</option>
+          <option>Blowout</option>
+          <option>Extensions</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Tell me a little about what you're looking for…"></textarea>
+      </div>
+      <button class="btn-submit" onclick="submitForm()">Send Message →</button>
+    </div>
+
+    <div class="form-success" id="formSuccess">
+      <p>Message received!</p>
+      <small>I'll be in touch within 24 hours. Can't wait to work with you ✦</small>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer>
+  <span class="footer-logo">Casmotology</span>
+  <p>© 2025 Casmotology · All Rights Reserved</p>
+  <p style="margin-top:0.4rem;">Made with love · <a href="#contact">Book an Appointment</a></p>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
